@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>submit</button>
+    <script>
+        function countdown(callback) {
+    let count = 10;
+  
+    function startCountdown() {
+      if (count >= 1) {
+        alert(count);
+        count--;
+        setTimeout(startCountdown, 1000); // Wait for 1 second
+      } else {
+        callback();
+      }
+    }
+  
+    startCountdown();
+  }
+  
+  function displayMessage() {
+    alert("Happy Independence Day!");
+  }
+  
+  // Start the countdown
+  countdown(displayMessage);
+    </script>
+    
+</body>
+</html>
